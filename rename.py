@@ -66,5 +66,4 @@ class FileRename:
 
 if __name__ == '__main__':
 	FileRename(sys.argv[1]).rename_from_clipboard()
-	return 0
 
