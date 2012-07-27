@@ -54,12 +54,11 @@ class FileRename:
 			raise Exception("El portapapeles no posee una cadena de texto valida")
 		
 		# Genera el nombre de archivo
-		dirname = os.path.dirname(self.filename)
-		new_filename = os.path.join(dirname, clipboard)
-		extension = os.path.splitext(self.filename)[1][1:].strip()
+		new_filename = os.path.join(os.path.dirname(self.filename), clipboard)
+		extension = os.path.splitext(self.filename)[1]
 		
 		if extension != "":
-			new_filename += "." + extension
+			new_filename += extension
 		
 		os.rename(self.filename, new_filename)
 
