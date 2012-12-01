@@ -41,7 +41,6 @@ class FileRename:
 		""" Obtiene el contenido del portapapeles """
 		
 		clipboard = subprocess.check_output('xsel', shell = True)
-		subprocess.call("xsel -c", shell=True)
 		return clipboard
 	
 	def rename_from_clipboard(self):
